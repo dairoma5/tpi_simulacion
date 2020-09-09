@@ -188,7 +188,7 @@
 					<X>850</X><Y>130</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
@@ -200,7 +200,7 @@
 					<X>850</X><Y>150</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
@@ -208,8 +208,8 @@
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1599539293316</Id>
-					<Name><![CDATA[prom_cli_sis_o]]></Name>
-					<X>990</X><Y>130</Y>
+					<Name><![CDATA[prom_tcli_sis_o]]></Name>
+					<X>550</X><Y>440</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -220,8 +220,8 @@
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1599539302643</Id>
-					<Name><![CDATA[prom_cli_sis_f]]></Name>
-					<X>990</X><Y>150</Y>
+					<Name><![CDATA[prom_tcli_sis_f]]></Name>
+					<X>280</X><Y>440</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -231,12 +231,24 @@
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1599540455824</Id>
-					<Name><![CDATA[tiempo_total_sistema]]></Name>
-					<X>850</X><Y>100</Y>
+					<Id>1599604145512</Id>
+					<Name><![CDATA[tiempo_total_sistema_f]]></Name>
+					<X>850</X><Y>70</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1599604147590</Id>
+					<Name><![CDATA[tiempo_total_sistema_o]]></Name>
+					<X>850</X><Y>50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
@@ -245,7 +257,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1599276302366</Id>
 					<Name><![CDATA[pFisica]]></Name>
-					<X>960</X><Y>340</Y>
+					<X>720</X><Y>590</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -260,7 +272,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1599276584654</Id>
 					<Name><![CDATA[pOnline]]></Name>
-					<X>960</X><Y>380</Y>
+					<X>710</X><Y>490</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -309,7 +321,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[(1/2.8) * 5]]></Code>
+							<Code><![CDATA[(1/1.99) * 5]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1599537420694</Id>
@@ -688,7 +700,7 @@
 				<Connector>
 					<Id>1599514272546</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>470</X><Y>190</Y>
+					<X>410</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -696,11 +708,11 @@
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tiempo_total_O]]></ItemName>
+						<ItemName><![CDATA[serviceOnline]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
+						<ClassName><![CDATA[Service]]></ClassName>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
@@ -715,7 +727,7 @@
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-160</X><Y>0</Y></Point>
+						<Point><X>-100</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -806,7 +818,40 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tiempo_total_F]]></ItemName>
+						<ItemName><![CDATA[serviceFisico]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Service]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>100</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1599604090098</Id>
+					<Name><![CDATA[connector1]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[serviceOnline]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Service]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[tiempo_total_O]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -814,14 +859,14 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>160</X><Y>0</Y></Point>
+						<Point><X>450</X><Y>190</Y></Point>
+						<Point><X>530</X><Y>190</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1599517975402</Id>
-					<Name><![CDATA[connector1]]></Name>
-					<X>480</X><Y>190</Y>
+					<Id>1599604090128</Id>
+					<Name><![CDATA[connector5]]></Name>
+					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -839,39 +884,6 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[serviceOnline]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Service]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1599517990586</Id>
-					<Name><![CDATA[connector5]]></Name>
-					<X>580</X><Y>190</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[serviceOnline]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Service]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[tiempoTotal]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -880,14 +892,14 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
+						<Point><X>540</X><Y>190</Y></Point>
+						<Point><X>650</X><Y>190</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1599518001090</Id>
+					<Id>1599604116945</Id>
 					<Name><![CDATA[connector6]]></Name>
-					<X>580</X><Y>280</Y>
+					<X>450</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -905,7 +917,7 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[tiempoTotal]]></ItemName>
+						<ItemName><![CDATA[tiempo_total_F]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -915,13 +927,12 @@
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>70</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>-90</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1599518021578</Id>
-					<Name><![CDATA[connector12]]></Name>
-					<X>480</X><Y>280</Y>
+					<Id>1599604116948</Id>
+					<Name><![CDATA[connector8]]></Name>
+					<X>530</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -939,16 +950,17 @@
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[tpi_cinepolis]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[serviceFisico]]></ItemName>
+						<ItemName><![CDATA[tiempoTotal]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Service]]></ClassName>
+						<ClassName><![CDATA[TimeMeasureEnd]]></ClassName>
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>120</X><Y>0</Y></Point>
+						<Point><X>120</X><Y>-90</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -1248,11 +1260,6 @@
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[tiempo_total_sistema = tiempoTotal.dataset.getY(tiempoTotal.dataset.size()-1);
-prom_cli_sis_o = clientes_sistema_o / tiempo_total_sistema ;
-prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[destroyEntity]]></Name>
@@ -1367,7 +1374,7 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 				<EmbeddedObject>
 					<Id>1598407544981</Id>
 					<Name><![CDATA[serviceFisico]]></Name>
-					<X>540</X><Y>260</Y>
+					<X>410</X><Y>260</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1417,7 +1424,7 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular( 1.3,2.8,4.3 )]]></Code>
+								<Code><![CDATA[triangular( 1.3,1.99,2.8 )]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 							</Value>
 						</Parameter>
@@ -1528,9 +1535,6 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[clientes_sistema_f = clientes_sistema_f + 1;]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onTaskTerminated]]></Name>
@@ -2242,7 +2246,7 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 				<EmbeddedObject>
 					<Id>1598410790938</Id>
 					<Name><![CDATA[serviceOnline]]></Name>
-					<X>540</X><Y>170</Y>
+					<X>410</X><Y>170</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2364,6 +2368,9 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[enableTimeout]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[timeout]]></Name>
@@ -2406,9 +2413,6 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[clientes_sistema_o = clientes_sistema_o + 1;]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onTaskTerminated]]></Name>
@@ -2724,9 +2728,9 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1599514426910</Id>
+					<Id>1599604084064</Id>
 					<Name><![CDATA[tiempo_total_O]]></Name>
-					<X>450</X><Y>170</Y>
+					<X>510</X><Y>170</Y>
 					<Label><X>-20</X><Y>35</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2755,8 +2759,9 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[TiempoColaCajaO = TiempoColaCajaO + tiempo_total_O.dataset.getY(tiempo_total_O.dataset.size()-1);
-]]></Code>
+								<Code><![CDATA[tiempo_total_sistema_o =tiempo_total_sistema_o + tiempo_total_O.dataset.getY(tiempo_total_O.dataset.size()-1);
+clientes_sistema_o = clientes_sistema_o + 1;
+prom_tcli_sis_o = tiempo_total_sistema_o / clientes_sistema_o;]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -2800,9 +2805,9 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1599514453971</Id>
+					<Id>1599604110820</Id>
 					<Name><![CDATA[tiempo_total_F]]></Name>
-					<X>450</X><Y>260</Y>
+					<X>500</X><Y>260</Y>
 					<Label><X>-20</X><Y>35</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2831,8 +2836,9 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[TiempoColaCajaF = TiempoColaCajaF + tiempo_total_F.dataset.getY(tiempo_total_F.dataset.size()-1);
-]]></Code>
+								<Code><![CDATA[tiempo_total_sistema_f = tiempo_total_sistema_f + tiempo_total_F.dataset.getY(tiempo_total_F.dataset.size()-1);
+clientes_sistema_f = clientes_sistema_f + 1;
+prom_tcli_sis_f = tiempo_total_sistema_f / clientes_sistema_f ;]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -2894,7 +2900,7 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 				<Control Type="Window3D">
 					<Id>1598406754584</Id>
 					<Name><![CDATA[window3d]]></Name>
-					<X>80</X><Y>800</Y>
+					<X>200</X><Y>920</Y>
 					<Width>500</Width>
 					<Height>300</Height>
 					<MakeDefaultViewArea>true</MakeDefaultViewArea>
@@ -3911,7 +3917,7 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
     			<BarChart>
 					<Id>1598972569548</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>730</X><Y>440</Y>
+					<X>750</X><Y>440</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3929,23 +3935,23 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>180</Height>
+					<Width>340</Width>
+					<Height>110</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
-						<XOffset>50</XOffset>
+						<XOffset>20</XOffset>
 						<YOffset>30</YOffset>
-						<Width>40</Width>
-						<Height>120</Height>
+						<Width>300</Width>
+						<Height>30</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
 					</ChartArea>
 					<Legend>
-						<Place>EAST</Place>
+						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>150</Size>
+						<Size>20</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
@@ -3963,14 +3969,14 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
 					<ScaleType>AUTO</ScaleType>
 					<Bars>
-						<Direction>UP</Direction>
+						<Direction>RIGHT</Direction>
 						<RelativeWidth>0.74</RelativeWidth>
 					</Bars>
     			</BarChart>
     			<BarChart>
 					<Id>1598983466783</Id>
 					<Name><![CDATA[chart2]]></Name>
-					<X>450</X><Y>440</Y>
+					<X>760</X><Y>560</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3988,23 +3994,23 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>280</Width>
-					<Height>180</Height>
+					<Width>310</Width>
+					<Height>100</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>30</Width>
-						<Height>120</Height>
+						<XOffset>10</XOffset>
+						<YOffset>10</YOffset>
+						<Width>300</Width>
+						<Height>30</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
 					</ChartArea>
 					<Legend>
-						<Place>EAST</Place>
+						<Place>SOUTH</Place>
 						<TextColor>-16777216</TextColor>
-						<Size>180</Size>
+						<Size>40</Size>
 					</Legend>
 					<Labels>
 						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
@@ -4022,14 +4028,14 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 					<ScaleToExpression><![CDATA[1]]></ScaleToExpression>
 					<ScaleType>AUTO</ScaleType>
 					<Bars>
-						<Direction>UP</Direction>
+						<Direction>RIGHT</Direction>
 						<RelativeWidth>0.74</RelativeWidth>
 					</Bars>
     			</BarChart>
     			<Histogram>
-					<Id>1599000247778</Id>
-					<Name><![CDATA[chart4]]></Name>
-					<X>180</X><Y>440</Y>
+					<Id>1599606620199</Id>
+					<Name><![CDATA[chart5]]></Name>
+					<X>190</X><Y>440</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4079,14 +4085,77 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 						<RelativeWidth>0.8</RelativeWidth>
 					</Bars>
 					<HistogramDataExpression>
-					<Expression><![CDATA[tiempoTotal.distribution]]></Expression>
+					<Expression><![CDATA[tiempo_total_F.distribution]]></Expression>
 						<ColorPDF>-13726889</ColorPDF>
 						<ColorCDF>-32944</ColorCDF>
 						<ColorLowPercent>-9404272</ColorLowPercent>
 						<ColorHighPercent>-12004916</ColorHighPercent>
 						<ColorMean>-9728477</ColorMean>
 						<LineWidth>1</LineWidth>						
-						<Title><![CDATA[Tiempo en el sistema]]></Title>							
+						<Title><![CDATA[Tiempo en el sistema Físico]]></Title>							
+					</HistogramDataExpression>
+    			</Histogram>
+    			<Histogram>
+					<Id>1599606624469</Id>
+					<Name><![CDATA[chart6]]></Name>
+					<X>460</X><Y>440</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1599033600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>240</Width>
+					<Height>200</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>160</Width>
+						<Height>110</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<ShowPDF>true</ShowPDF>
+					<ShowCDF>false</ShowCDF>
+					<ShowMean>false</ShowMean>
+					<Bars>
+						<Direction>UP</Direction>
+						<RelativeWidth>0.8</RelativeWidth>
+					</Bars>
+					<HistogramDataExpression>
+					<Expression><![CDATA[tiempo_total_O.distribution]]></Expression>
+						<ColorPDF>-13726889</ColorPDF>
+						<ColorCDF>-32944</ColorCDF>
+						<ColorLowPercent>-9404272</ColorLowPercent>
+						<ColorHighPercent>-12004916</ColorHighPercent>
+						<ColorMean>-9728477</ColorMean>
+						<LineWidth>1</LineWidth>						
+						<Title><![CDATA[Tiempo en el sistema Online]]></Title>							
 					</HistogramDataExpression>
     			</Histogram>
 			</Presentation>
@@ -4513,7 +4582,7 @@ prom_cli_sis_f = clientes_sistema_f / tiempo_total_sistema ;]]></Code>
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>1080</Width>
+		<Width>1100</Width>
 		<Height>660</Height>
 	</Frame>
 	<Database>
